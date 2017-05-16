@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   public myTitle = "Das ist mein Titel";
+
+  public fn($event) {
+    console.log($event);
+  }
+
 }
