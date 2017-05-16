@@ -2,14 +2,5 @@
   book-list works!
 </p>
 <div *ngFor="let book of books">
-  <h3>Titel: {{book.title}}</h3>
-  <p>Subtitle: {{book.subtitle}}</p>
-  <p>isbn: {{book.isbn}}</p>
-  <p>abstract: {{book.abstract}}</p>
-  <p>numPages: {{book.numPages}}</p>
-  <p>author: {{book.author}}</p>
-
-  <p>name: {{book.publisher.name}}</p>
-  <p>url: {{book.publisher.url}}</p>
-
+  <a [routerLink]="['/books', book.isbn]">Titel: {{book.title}}</a>
 </div>
