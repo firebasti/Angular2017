@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Book} from "../shared/book";
 
 @Component({
   selector: 'app-book-list',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-  books = ["Book1", "Book2", "Book3"];
-    
-  
+
+  books: Book[] = [{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}];
+
+
   constructor() { }
 
   ngOnInit() {

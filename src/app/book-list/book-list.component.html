@@ -2,5 +2,8 @@
   book-list works!
 </p>
 <div *ngFor="let book of books">
-  <span>{{book}}</span>
+  <h3>Titel: {{book.title}}</h3>
+  <p>ISBN: {{book.isbn}}</p>
+  <p *ngIf="book.pages">PAGES: {{book.pages}}</p>
+
 </div>
