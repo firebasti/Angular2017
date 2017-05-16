@@ -9,10 +9,22 @@ import {BookDataService} from "../shared/book-data.service";
 })
 export class BookListComponent implements OnInit {
 
-  books: Book[] = [{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}];
+  books: Book[];// = [{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}];
+
+
 
   constructor(private bookData: BookDataService){
-    this.books = bookData.getBooks();
+    let subscription = bookData.getBooks().subscribe(result => this.asyncBookSuccess(result),error => this.asyncBookError(error));
+    //this.books = bookData.getBooks();
+  }
+
+  public asyncBookSuccess(books: Book[]) {
+    console.log("success")
+    this.books=books;
+  }
+  public asyncBookError(error: any) {
+    console.log("error"+error)
+    //this.books=books;
   }
 
   ngOnInit() {
