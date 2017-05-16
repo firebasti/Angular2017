@@ -14,8 +14,7 @@ export class BookListComponent implements OnInit {
 
 
   constructor(private bookData: BookDataService){
-    let subscription = bookData.getBooks().subscribe(result => this.asyncBookSuccess(result),error => this.asyncBookError(error));
-    //this.books = bookData.getBooks();
+
   }
 
   public asyncBookSuccess(books: Book[]) {
@@ -28,6 +27,8 @@ export class BookListComponent implements OnInit {
   }
 
   ngOnInit() {
+    let subscription = this.bookData.getBooks().subscribe(result => this.asyncBookSuccess(result),error => this.asyncBookError(error));
+    //this.books = bookData.getBooks();
   }
 
 }
