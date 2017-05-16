@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
 import { BookListComponent } from './book-list/book-list.component';
+import {BookDataService} from "./shared/book-data.service";
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { BookListComponent } from './book-list/book-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [BookDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
