@@ -5,13 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
-import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
+import { BookListComponent } from './book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoBoxComponent,
-    MouseCursorComponent
+    BookListComponent,
   ],
   imports: [
     BrowserModule,
