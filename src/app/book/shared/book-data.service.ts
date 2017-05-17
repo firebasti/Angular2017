@@ -17,17 +17,11 @@ export class BookDataService {
 
 
   public getBookByISBN(isbn: string):Observable<Book>  {
-
-
-  //return [{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}];
-  //return Observable.throw([{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}]);
-  //return Observable.of([{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}]);
-
   return this.http.get('http://localhost:4730/books/'+isbn)
     .map(response => response.json());
 }
-  
-  
+
+
   public getBooks():Observable<Book[]>  {
 
 

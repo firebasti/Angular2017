@@ -5,10 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
-import { BookListComponent } from './book-list/book-list.component';
-import {BookDataService} from "./shared/book-data.service";
+import { BookListComponent } from './book/book-list/book-list.component';
+import {BookDataService} from "./book/shared/book-data.service";
 import {routing} from './app.routing';
-import { BookDetailComponent } from './book-detail/book-detail.component'
+import { BookDetailComponent } from './book/book-detail/book-detail.component'
+import {BookModule} from "./book/book.module";
+
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component'
     BrowserModule,
     FormsModule,
     HttpModule,
+    BookModule,
     routing
   ],
   providers: [BookDataService],
