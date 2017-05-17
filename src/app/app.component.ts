@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  public myTitle = "Das ist mein Titel";
+  public myTitle = "Das ist mein Titel mit Marco";
 
   public fn($event) {
     console.log($event);
