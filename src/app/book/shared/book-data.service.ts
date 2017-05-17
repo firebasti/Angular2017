@@ -22,6 +22,11 @@ export class BookDataService {
 }
 
 
+  public updateBook(isbn: string, book: Book) {
+    return this.http.put('http://localhost:4730/books/'+isbn, book)
+      .map(response => response.json());
+  }
+
   public getBooks():Observable<Book[]>  {
 
 

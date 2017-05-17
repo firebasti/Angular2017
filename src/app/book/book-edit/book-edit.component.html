@@ -2,7 +2,7 @@
   book-edit works!
 </p>
 
-<form *ngIf="book" #form="ngForm">
+<form *ngIf="book" #form="ngForm" (ngSubmit)="save(form.value)">
   <input
     type="text"
     [(ngModel)]="book.title"
@@ -41,6 +41,7 @@
     name="numPages"
     #numPages="ngModel">
   <br>
+  <button type="submit">Speichern</button>
 
 
 </form>

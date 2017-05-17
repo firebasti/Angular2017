@@ -14,6 +14,12 @@ export class BookEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private bookData: BookDataService) { }
 
+
+  public save(params) {
+    console.log(""+JSON.stringify(params));
+    this.bookData.updateBook(params.isbn, this.book).subscribe();
+  }
+
   ngOnInit() {
 
     this.route.params
