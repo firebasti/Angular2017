@@ -11,3 +11,24 @@ button {
   color: red;
 
 }
+
+
+input.ng-valid {
+  background-color: green;
+}
+
+input.ng-invalid {
+  background-color: red;
+}
+
+input.ng-dirty {
+  background-color: yellow;
+}
+
+input.ng-pristine {
+  background-color: deeppink;
+}
+
+input.ng-untouched {
+  background-color: greenyellow;
+}

@@ -3,6 +3,7 @@
 </p>
 
 <div *ngIf="book">
+  <a [routerLink]="['edit']">Bearbeiten!!!</a>
   <h3>Titel: {{book.title}}</h3>
   <p>Subtitle: {{book.subtitle}}</p>
   <p>ISBN: {{book.isbn}}</p>

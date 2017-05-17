@@ -1,0 +1,11 @@
+<p>
+  book-edit works!
+</p>
+
+<form *ngIf="book" #form="ngForm">
+  <input
+    type="text"
+    [(ngModel)]="book.title"
+    name="title"
+    #title="ngModel">
+</form>
