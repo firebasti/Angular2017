@@ -1,6 +1,10 @@
 <p>
   book-list works!
 </p>
-<div *ngFor="let book of books">
+<!-- <div *ngFor="let book of books">
+  <a [routerLink]="[book.isbn]" tooltip="Hallo">Titel: {{book.title}}</a>
+</div> -->
+
+<div *ngFor="let book of booksObservable | async">
   <a [routerLink]="[book.isbn]" tooltip="Hallo">Titel: {{book.title}}</a>
 </div>

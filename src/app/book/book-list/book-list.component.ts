@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../shared/book";
 import {BookDataService} from "../shared/book-data.service";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-book-list',
@@ -10,7 +11,7 @@ import {BookDataService} from "../shared/book-data.service";
 export class BookListComponent implements OnInit {
 
   books: Book[];// = [{title: 'Dschungelbuch', isbn: 123}, {title: 'Angular für Anfänger', isbn: 456, pages: 137}, {title: 'Bibel', isbn: 789}];
-
+  booksObservable: Observable<Book[]>;
 
 
   constructor(private bookData: BookDataService){
@@ -27,7 +28,10 @@ export class BookListComponent implements OnInit {
   }
 
   ngOnInit() {
-    let subscription = this.bookData.getBooks().subscribe(result => this.asyncBookSuccess(result),error => this.asyncBookError(error));
+    this.booksObservable = this.bookData.getBooks();
+
+    //let subscription = this.bookData.getBooks().subscribe(result => this.asyncBookSuccess(result),error => this.asyncBookError(error));
+
     //this.books = bookData.getBooks();
   }
 
