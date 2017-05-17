@@ -8,6 +8,7 @@ import {BookDataService} from "./shared/book-data.service";
 import {BookListComponent} from "./book-list/book-list.component";
 import {BookDetailComponent} from "./book-detail/book-detail.component";
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { TooltipDirective } from './tooltip.directive';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { BookEditComponent } from './book-edit/book-edit.component';
     routing
   ],
   providers: [BookDataService],
-  declarations: [BookComponent, BookListComponent, BookDetailComponent, BookEditComponent]
+  declarations: [BookComponent, BookListComponent, BookDetailComponent, BookEditComponent, TooltipDirective]
 })
 export class BookModule { }
