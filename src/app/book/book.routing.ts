@@ -6,7 +6,7 @@ import {BookComponent} from "./book/book.component";
 
 
 const routes: Routes = [
-  {path: 'books', component: BookComponent, children: [{component: BookListComponent, path: ''},{component: BookDetailComponent, path: ':isbn'}]},
+  {path: '', component: BookComponent, children: [{component: BookListComponent, path: ''},{component: BookDetailComponent, path: ':isbn'}]},
 ]
 
 export const routing = RouterModule.forChild(routes);

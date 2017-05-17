@@ -5,11 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
-import { BookListComponent } from './book/book-list/book-list.component';
+//import { BookListComponent } from './book/book-list/book-list.component';
 import {BookDataService} from "./book/shared/book-data.service";
 import {routing} from './app.routing';
-import { BookDetailComponent } from './book/book-detail/book-detail.component'
-import {BookModule} from "./book/book.module";
+//import { BookDetailComponent } from './book/book-detail/book-detail.component'
+//import {BookModule} from "./book/book.module";
 
 
 
@@ -17,17 +17,17 @@ import {BookModule} from "./book/book.module";
   declarations: [
     AppComponent,
     InfoBoxComponent,
-    BookListComponent,
-    BookDetailComponent,
+    //BookListComponent,
+    //BookDetailComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    BookModule,
+    //BookModule,
     routing
   ],
-  providers: [BookDataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,11 +13,10 @@ import {ModuleWithProviders} from '@angular/core'
 //];
 
 //Extended version
-const routes: Routes = [{
-  path: '',
-  pathMatch: 'full',
-  redirectTo: '/books'
-}];
+const routes: Routes = [
+  {path: '', redirectTo: '/books', pathMatch: 'full'},
+  {path: 'books', loadChildren: './book/book.module#BookModule'}
+];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
 
